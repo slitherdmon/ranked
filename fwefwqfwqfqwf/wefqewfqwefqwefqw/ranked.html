@@ -5,16 +5,44 @@
   </head>
   <body>
     <h1>Click for Ranked.</h1>
+    <div class="btns-move">
     <div style="text-align: center;">
       <input onclick="openRanked()" class="btn" type="button" value="Ranked">
+      <input type="button" class="btn" value="Other Sites / Home" id="othersites">
+    </div>
+    </div>
+    <div class="othersites" id="othersites" style="display: none;">
+      <h1>Other Sites / Home</h1>
+      <div style="text-align: center;">
+        <button class="btn" onclick="window.location.href='../../'">Home</button>
+        <button class="btn" onclick="window.open('https://g.mathhelpflashcards.shop')">Skibidi Sites</button>
+        <button class="btn" onclick="window.open('https://mg.mathhelpflashcards.shop')">MAD Games</button>
+        <button class="btn" onclick="window.open('https://freaky.madgames.store')">Freaky Sites</button>
+        <button class="btn" onclick="window.open('https://sites.google.com/waseca.k12.mn.us/wasecasites')">Waseca Sites</button>
+      </div>
     </div>
   </body>
   <script>
     function openRanked() {
       var win = window.open('https://wqfwqfwefwqef.gh.madgames.store/embed.html#https://jerkmate.com/jerkmate-ranked/')
     }
+    document.getElementById('othersites').addEventListener('click', function() {
+    const div = document.querySelector('.othersites');
+    if (div.style.display === 'none') {
+        div.style.display = 'block';
+    } else {
+        div.style.display = 'none';
+    }
+})
   </script>
   <style>
+    .btns-move {
+      padding: 10px;
+    }
+    .othersites {
+      padding: 50px;
+      border: 1px solid;
+    }
     body {
       background-color: white;
       color: black;
@@ -24,8 +52,8 @@
       font-family: arial;
     }
     .btn {
-      height: 30px;
-      width: 75px;
+      height: 60px;
+      width: 150px;
       background-color: white;
       border: 1px solid;
       border-radius: 10px;
